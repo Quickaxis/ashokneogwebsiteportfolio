@@ -783,9 +783,10 @@
     .venture-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
-      display: block;
+      padding: 8px;
+      box-sizing: border-box;
     }
 
     .venture-image .image-fallback {
@@ -1136,7 +1137,7 @@
     /* Visual Gallery (Madhurjya Grid) */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 28px;
     }
 
@@ -1144,19 +1145,18 @@
       border-radius: 28px;
       overflow: hidden;
       background: #E8DDC8;
-      min-height: 320px;
       cursor: pointer;
-      position: relative;
+      min-height: 320px;
     }
 
     .gallery-item.large {
-      grid-column: span 6;
-      min-height: 420px;
+      grid-column: span 3;
+      min-height: 430px;
     }
 
     .gallery-item.small {
-      grid-column: span 3;
-      min-height: 320px;
+      grid-column: span 2;
+      min-height: 330px;
     }
 
     .gallery-item img {
@@ -1166,11 +1166,27 @@
       object-fit: cover;
       object-position: center;
       display: block;
+      padding: 0;
       transition: transform 0.5s ease;
     }
 
     .gallery-item:hover img {
       transform: scale(1.04);
+    }
+
+    .gallery-item img[src*="ashokneog1"],
+    .gallery-item img[src*="ashokneog2"],
+    .gallery-item img[src*="ashokneogwork"] {
+      object-position: center top;
+    }
+
+    .gallery-item img[src*="rangnirman"],
+    .gallery-item img[src*="toradevelopers"],
+    .gallery-item img[src*="toraconstructions"],
+    .gallery-item img[src*="junutorahomestay"],
+    .gallery-item img[src*="toraassamtea"],
+    .gallery-item img[src*="toraassmtea"] {
+      object-position: center;
     }
 
     .gallery-item .image-fallback {
@@ -1581,6 +1597,16 @@
       border-radius: var(--radius-xxl) var(--radius-xxl) 0 0;
     }
 
+    .lightbox img,
+    .lightbox-image {
+      max-width: 92vw;
+      max-height: 86vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+
     .lightbox-caption {
       font-family: var(--font-serif);
       font-size: 1.2rem;
@@ -1826,18 +1852,23 @@
       
       .gallery-grid {
         grid-template-columns: 1fr;
+        gap: 22px;
       }
-      
+
       .gallery-item,
       .gallery-item.large,
       .gallery-item.small {
         grid-column: span 1 !important;
-        min-height: 330px;
+        min-height: 360px;
+        border-radius: 24px;
       }
 
       .gallery-item img {
-        height: auto;
-        max-height: 460px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        padding: 0;
       }
       
       .contact-buttons {
