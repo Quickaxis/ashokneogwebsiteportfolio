@@ -838,15 +838,15 @@
 
     .venture-image {
       width: 100%;
-      height: 270px;
-      border-radius: 24px;
+      height: 260px;
+      border-radius: 28px;
       overflow: hidden;
       background: #F6F1E7;
-      margin-bottom: 34px;
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 34px;
+      position: relative;
     }
 
     .venture-image img {
@@ -854,8 +854,22 @@
       height: 100%;
       object-fit: contain;
       object-position: center;
-      padding: 18px;
+      padding: 10px;
       box-sizing: border-box;
+      display: block;
+    }
+
+    .venture-logo {
+      max-width: 92%;
+      max-height: 92%;
+      object-fit: contain;
+    }
+
+    .venture-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
     }
 
     .venture-image .image-fallback {
@@ -1849,11 +1863,6 @@
         height: 420px;
       }
 
-      .venture-image,
-      .venture-image .image-fallback {
-        height: 240px;
-      }
-
       .gallery-item {
         min-height: 340px;
       }
@@ -1863,7 +1872,6 @@
       .hero-visual img,
       .bio-image img,
       .roots-image img,
-      .venture-image img,
       .gallery-item img {
         object-fit: contain;
         object-position: center;
@@ -1894,6 +1902,32 @@
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
         box-shadow: 0 8px 22px rgba(31, 51, 43, 0.08);
+        padding: 18px 16px 28px;
+      }
+
+      .venture-image,
+      .venture-image .image-fallback {
+        height: 220px;
+        border-radius: 24px;
+        margin-bottom: 26px;
+        background: #F6F1E7;
+      }
+
+      .venture-image img {
+        object-fit: contain;
+        object-position: center;
+        padding: 6px;
+        transform: scale(1.08);
+      }
+
+      .venture-card h3 {
+        font-size: 1.55rem;
+        line-height: 1.15;
+      }
+
+      .venture-card p {
+        font-size: 0.96rem;
+        line-height: 1.65;
       }
 
       .about-visual {
@@ -2115,7 +2149,7 @@
         <!-- Venture 1: Rang Nirman -->
         <article class="venture-card reveal-up">
           <div class="venture-image">
-            <img src="photos/rangnirman.jpg" alt="Rang Nirman venture associated with Ashok Kumar Neog" data-fallback-title="Rang Nirman" data-fallback-subtitle="Building & Flats Venture" loading="lazy" decoding="async">
+            <img class="venture-logo" src="photos/rangnirman.jpg" alt="Rang Nirman venture associated with Ashok Kumar Neog" data-fallback-title="Rang Nirman" data-fallback-subtitle="Building & Flats Venture" loading="lazy" decoding="async">
           </div>
           <div class="venture-content">
             <span class="venture-role">MANAGING DIRECTOR</span>
@@ -2130,7 +2164,7 @@
         <!-- Venture 2: Tora Developers -->
         <article class="venture-card reveal-up">
           <div class="venture-image">
-            <img src="photos/toradevelopers.jpg" alt="Tora Developers founded by Ashok Kumar Neog in Dibrugarh Assam" loading="lazy" decoding="async">
+            <img class="venture-logo" src="photos/toradevelopers.jpg" alt="Tora Developers founded by Ashok Kumar Neog in Dibrugarh Assam" loading="lazy" decoding="async">
           </div>
           <div class="venture-content">
             <span class="venture-role">FOUNDER</span>
@@ -2145,7 +2179,7 @@
         <!-- Venture 3: Tora Constructions -->
         <article class="venture-card reveal-up">
           <div class="venture-image">
-            <img src="photos/toraconstructions.jpg" alt="Tora Constructions founded by Ashok Kumar Neog" loading="lazy" decoding="async">
+            <img class="venture-logo" src="photos/toraconstructions.jpg" alt="Tora Constructions founded by Ashok Kumar Neog" loading="lazy" decoding="async">
           </div>
           <div class="venture-content">
             <span class="venture-role">FOUNDER & CEO</span>
@@ -2160,7 +2194,7 @@
         <!-- Venture 4: Junu Tora Homestay -->
         <article class="venture-card reveal-up">
           <div class="venture-image">
-            <img src="photos/junutorahomestay.jpg" alt="Junu Tora Homestay associated with Ashok Kumar Neog in Dibrugarh Assam" data-fallback-title="Junu Tora Homestay" data-fallback-subtitle="Hospitality Venture" loading="lazy" decoding="async">
+            <img class="venture-logo" src="photos/junutorahomestay.jpg" alt="Junu Tora Homestay associated with Ashok Kumar Neog in Dibrugarh Assam" data-fallback-title="Junu Tora Homestay" data-fallback-subtitle="Hospitality Venture" loading="lazy" decoding="async">
           </div>
           <div class="venture-content">
             <span class="venture-role">HOSPITALITY VENTURE</span>
@@ -2175,7 +2209,7 @@
         <!-- Venture 5: TORA Assam Tea -->
         <article class="venture-card reveal-up">
           <div class="venture-image">
-            <img src="photos/toraassamtea.jpg" alt="TORA Assam Tea premium Assam tea brand associated with Ashok Kumar Neog" data-fallback-title="TORA Assam Tea" data-fallback-subtitle="Premium Assam Tea Brand" loading="lazy" decoding="async">
+            <img class="venture-poster" src="photos/toraassamtea.jpg" alt="TORA Assam Tea premium Assam tea brand associated with Ashok Kumar Neog" data-fallback-title="TORA Assam Tea" data-fallback-subtitle="Premium Assam Tea Brand" loading="lazy" decoding="async">
           </div>
           <div class="venture-content">
             <span class="venture-role">PREMIUM ASSAM TEA BRAND</span>
