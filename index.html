@@ -798,7 +798,9 @@
     }
 
     /* --- Detailed Image Spacing Fixes (Replicating Madhurjya) --- */
-    .hero-media {
+    .hero-media,
+    .hero-image,
+    .hero-visual {
       width: 100%;
       min-height: 620px;
       border-radius: 42px;
@@ -808,7 +810,9 @@
       position: relative;
     }
 
-    .hero-media img {
+    .hero-media img,
+    .hero-image img,
+    .hero-visual img {
       width: 100%;
       height: 100%;
       min-height: 620px;
@@ -818,7 +822,9 @@
     }
 
     .image-fallback.hero-fallback,
-    .hero-media .image-fallback {
+    .hero-media .image-fallback,
+    .hero-image .image-fallback,
+    .hero-visual .image-fallback {
       width: 100%;
       min-height: 620px;
       border-radius: 42px;
@@ -1820,16 +1826,17 @@
       
       /* --- Dynamic Height Overrides For Mobile --- */
       .hero-media,
+      .hero-image,
+      .hero-visual,
       .hero-media img,
-      .hero-media .image-fallback {
+      .hero-image img,
+      .hero-visual img,
+      .hero-media .image-fallback,
+      .hero-image .image-fallback,
+      .hero-visual .image-fallback {
         min-height: 440px;
         height: 440px;
         border-radius: 30px;
-      }
-
-      .venture-image,
-      .venture-image .image-fallback {
-        height: 230px;
       }
 
       .bio-image,
@@ -1840,6 +1847,15 @@
       .roots-image,
       .roots-image .image-fallback {
         height: 420px;
+      }
+
+      .venture-image,
+      .venture-image .image-fallback {
+        height: 230px;
+      }
+
+      .gallery-item {
+        min-height: 330px;
       }
       
       .stats-grid {
@@ -2284,7 +2300,7 @@
       <!-- Replicating Madhurjya span styles using .large and .small helper classes -->
       <div class="gallery-grid">
         <!-- Item 1 -->
-        <div class="gallery-item large" data-src="photos/ashokneog1.jpg" data-title="Ashok Kumar Neog">
+        <div class="gallery-item large" data-src="photos/ashokneog1.jpg" data-title="Ashok Kumar Neog entrepreneur from Dibrugarh Assam">
           <img src="photos/ashokneog1.jpg" alt="Ashok Kumar Neog entrepreneur from Dibrugarh Assam" data-fallback-title="Ashok Kumar Neog" data-fallback-subtitle="Entrepreneur" loading="lazy" decoding="async">
           <div class="gallery-overlay">
             <span class="gallery-caption">Ashok Kumar Neog entrepreneur from Dibrugarh Assam</span>
@@ -2292,15 +2308,15 @@
         </div>
         
         <!-- Item 2 -->
-        <div class="gallery-item large" data-src="photos/ashokneog2.jpg" data-title="Founder Profile">
-          <img src="photos/ashokneog2.jpg" alt="Ashok Neog Founder & CEO of Tora Constructions" data-fallback-title="Founder Profile" data-fallback-subtitle="Tora CEO" loading="lazy" decoding="async">
+        <div class="gallery-item large" data-src="photos/ashokneog2.jpg" data-title="Ashok Neog founder and entrepreneur">
+          <img src="photos/ashokneog2.jpg" alt="Ashok Neog founder and entrepreneur" data-fallback-title="Founder Profile" data-fallback-subtitle="Tora CEO" loading="lazy" decoding="async">
           <div class="gallery-overlay">
-            <span class="gallery-caption">Ashok Neog Founder & CEO of Tora Constructions</span>
+            <span class="gallery-caption">Ashok Neog founder and entrepreneur</span>
           </div>
         </div>
 
         <!-- Item 3 -->
-        <div class="gallery-item small" data-src="photos/ashokneogwork.jpg" data-title="On-site Consultation">
+        <div class="gallery-item small" data-src="photos/ashokneogwork.jpg" data-title="Ashok Kumar Neog business owner from Upper Assam">
           <img src="photos/ashokneogwork.jpg" alt="Ashok Kumar Neog business owner from Upper Assam" data-fallback-title="On-site Consultation" data-fallback-subtitle="Upper Assam Work" loading="lazy" decoding="async">
           <div class="gallery-overlay">
             <span class="gallery-caption">Ashok Kumar Neog business owner from Upper Assam</span>
@@ -2316,7 +2332,7 @@
         </div>
 
         <!-- Item 5 -->
-        <div class="gallery-item small" data-src="photos/toradevelopers.jpg" data-title="Tora Developers Plotting">
+        <div class="gallery-item small" data-src="photos/toradevelopers.jpg" data-title="Tora Developers plot-selling company in Dibrugarh">
           <img src="photos/toradevelopers.jpg" alt="Tora Developers plot-selling company in Dibrugarh" data-fallback-title="Tora Developers Plotting" data-fallback-subtitle="Developers" loading="lazy" decoding="async">
           <div class="gallery-overlay">
             <span class="gallery-caption">Tora Developers plot-selling company in Dibrugarh</span>
@@ -2324,7 +2340,7 @@
         </div>
 
         <!-- Item 6 -->
-        <div class="gallery-item small" data-src="photos/toraconstructions.jpg" data-title="Tora Constructions Build">
+        <div class="gallery-item small" data-src="photos/toraconstructions.jpg" data-title="Tora Constructions Dibrugarh Assam">
           <img src="photos/toraconstructions.jpg" alt="Tora Constructions Dibrugarh Assam" data-fallback-title="Tora Constructions Build" data-fallback-subtitle="Construction" loading="lazy" decoding="async">
           <div class="gallery-overlay">
             <span class="gallery-caption">Tora Constructions Dibrugarh Assam</span>
